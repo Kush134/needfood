@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Donate</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="others.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+</head>
+<body id="donations-body">
+  <nav class="sticky">
+        <div>
+          <ul>
+            <li><a href="index.html">
+              <span class="hlogo"><img src="images/logo.jpeg" style="width: 30px;" ></span>Home</a></li>
+            <li><a href="addRecipes.html"><span class="emoji">&#128213</span>Recipes</a></li>
+            <li><a href="volunteer.html"><span class="emoji">&#9995</span>Volunteer</a></li>
+            <li><a href="resources.html"><span class="emoji">&#129668</span>Resources</a></li>
+            <li><a href="donate.html"><span class="emoji">&#128140</span>Donate</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+  <a href="/index.html"> 
+    <span class="home"> </span>
+  </a>
+  <div class="donations" style="text-align:center;">
+    <h1>&#128140 Donate</h1><br>
+    <h1>Nearest Food Bank to you: <span id="question" style="color:#FBDA8B;">:</span></h1>
+    <div class="hidden">
+         <h1 id="greeting">
+          </h1>
+         <h3 id="question">
+       Peek a Boo! I see you in
+     </h3>
+       <br>
+      <p>Your Public IP Address:</p>
+    <p id="ip">
+      </div>
+    <div id="container"><h2 id="donateName"><a id="donateLink" href=""> </a></h2></div>
+  
+    <div class="summary-item" id="item-3">
+			<h5 class="item-title">Map</h5>
+			<p class="item-text"><span class="item-data">
+        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-95.27670174837114%2C29.77964557426884%2C-95.27352333068849%2C29.78256950173592&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/29.78111/-95.27511">View Larger Map</a></small>
+    
+    
+      </span></p>
+		</div>
+  </div>
+  
+  
+<script src="map2.js"></script>
+<script src="ip.js"></script>
+<script>
+  var weather = document.getElementById("question");
+  var name = document.getElementById("donateName");
+  var link = document.getElementById("donateLink");
+
+  if (weather.textContent.includes('CO')) {
+    name.innerHTML = "World Food Programme"
+    link.innerHTML = "https://www.wfp.org/donate-now/"
+
+  } else{
+    name.innerHTML = "World Food Programme"
+    link.innerHTML = "https://www.wfp.org/donate-now/"
+  };
+</script>
+</body>
+</html>
